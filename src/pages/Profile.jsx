@@ -137,7 +137,7 @@ const projects = [
         <div className="relative z-10 w-full max-w-[1500px] flex flex-col lg:flex-row items-center justify-between gap-12 mt-32 lg:mt-20">
 <br /><br /><br />
           {/* Sisi Teks: Memastikan lg:items-start dan lg:text-left tetap terjaga */}
-          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-1"><br /><br /><br /><br /><br /><br /><br /><br />
+          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-1"><br /><br /><br /><br />
             <h2 className="text-[2.5rem] md:text-7xl lg:text-[8.5rem] font-black tracking-tighter leading-[0.9] uppercase drop-shadow-2xl text-white">
               Rayhanza <br /> Nadhif <br /> Athala
             </h2>
