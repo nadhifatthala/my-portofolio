@@ -126,7 +126,7 @@ const projects = [
       <StarsBackground />
 
       {/* ── SECTION 1: HERO ── */}
-      <section id="home" className="relative min-h-screen w-full flex items-center justify-center px-6 lg:px-12 overflow-hidden bg-transparent">
+      <section id="home" className="relative min-h-screen w-full flex items-center justify-center px-6 lg:px-12 overflow-hidden bg-transparent pt-32 lg:pt-0">
 
         {/* Background R tetap di tengah */}
         <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none text-white/[0.02] z-[1]">
@@ -138,7 +138,7 @@ const projects = [
 
           {/* Sisi Teks: Memastikan lg:items-start dan lg:text-left tetap terjaga */}
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-1">
-            <h2 className="text-5xl md:text-7xl lg:text-[8.5rem] font-black tracking-tighter leading-[0.85] uppercase drop-shadow-2xl text-white">
+            <h2 className="text-[2.5rem] md:text-7xl lg:text-[8.5rem] font-black tracking-tighter leading-[0.9] uppercase drop-shadow-2xl text-white">
               Rayhanza <br /> Nadhif <br /> Athala
             </h2>
 
