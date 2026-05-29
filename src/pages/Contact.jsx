@@ -9,7 +9,6 @@ const Contact = () => {
             label: 'Email Address',
             value: 'nadhifatthala@gmail.com',
             icon: <FaEnvelope />,
-            link: 'mailto:rayhanza@example.com',
             color: 'text-white',
             hoverBg: 'hover:border-blue-500/50'
         },
@@ -18,7 +17,6 @@ const Contact = () => {
             label: 'Linkedin',
             value: 'Rayhanza Nadhif Athala',
             icon: <FaLinkedin />,
-            link: 'https://www.linkedin.com/in/rayhanza-nadhif-athala-3a61b12b8',
             color: 'text-sky-400',
             hoverBg: 'hover:border-sky-500/50'
         },
@@ -27,7 +25,6 @@ const Contact = () => {
             label: 'Github Repository',
             value: 'nadhifatthala',
             icon: <FaGithub />,
-            link: 'https://github.com/nadhifatthala',
             color: 'text-white',
             hoverBg: 'hover:border-white/40'
         },
@@ -36,7 +33,6 @@ const Contact = () => {
             label: 'Social Media',
             value: '@nadhifatthllh',
             icon: <FaInstagram />,
-            link: 'https://instagram.com/username',
             color: 'text-pink-400',
             hoverBg: 'hover:border-pink-500/50'
         },
@@ -95,10 +91,7 @@ const Contact = () => {
                             </div>
 
                             {/* Action Indicator */}
-                            <div className="flex items-center gap-4 text-white/10 group-hover:text-white transition-all uppercase tracking-[0.3em] text-[12px] font-black italic">
-                                <span className="hidden sm:block">Open</span>
-                                <FaArrowRight className="group-hover:translate-x-3 transition-transform text-xl" />
-                            </div>
+                           
 
                             {/* Glossy Effect Overlay */}
                             <div className="absolute top-0 left-0 w-full h-[45%] bg-white/[0.03] rounded-t-[30px] md:rounded-t-[50px] pointer-events-none"></div>
