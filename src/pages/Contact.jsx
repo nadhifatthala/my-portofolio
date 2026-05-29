@@ -51,15 +51,13 @@ const Contact = () => {
 
                 {/* HEADER */}
                 <div className="w-full text-center mb-20 md:mb-32"><br /> <br /> <br /> <br /> <br /> <br />
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-none tracking-tighter uppercase mb-8 text-white drop-shadow-2xl">
-                        LET'S
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 italic">
-                            CONNECT.
-                        </span><br /> <br />
-                    </h1>
-                    <p className="max-w-xl mx-auto text-blue-100/40 text-lg md:text-xl font-light leading-relaxed">
-                        Hubungi saya melalui jalur resmi di bawah ini.
-                    </p>
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tighter uppercase mb-6 text-white drop-shadow-2xl">
+    LET'S
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 ">
+        {" "}CONNECT.
+    </span>
+</h1>
+                    
                 </div>
 
                 <div className="w-full flex flex-col gap-6 md:gap-8"> {/* Menambah gap antar box */}

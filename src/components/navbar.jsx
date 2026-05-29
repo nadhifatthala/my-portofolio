@@ -69,28 +69,55 @@ const Navbar = () => {
       </nav>
 
       {/* --- MOBILE MENU OVERLAY (REFINED) --- */}
-      <div className={`
-        fixed inset-0 bg-[#020617] z-[110] transition-all duration-500 ease-in-out flex flex-col items-center justify-center lg:hidden
-        ${isMenuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-full opacity-0 invisible"}
-      `}>
-        <div className="flex flex-col items-center gap-10">
-          {mobileLinks.map((link) => (
-            <Link 
-              key={link.name} 
-              to={link.path} 
-              onClick={toggleMenu}
-              className="text-white text-4xl sm:text-5xl font-black uppercase tracking-[0.3em] hover:text-blue-400 transition-all text-center"
-            >
-              {link.name}
-            </Link>
-          ))}
-          
-          <div className="mt-10 flex flex-col items-center gap-4">
-            <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-            <p className="text-white/20 text-xs font-black uppercase tracking-[1em] italic">Rayhanza</p>
-          </div>
-        </div>
-      </div>
+      {/* --- MOBILE MENU OVERLAY (HALF WINDOW / 50vh) --- */}
+<>
+  {/* 1. Backdrop (Latar belakang transparan untuk area bawah) */}
+  <div 
+    onClick={toggleMenu}
+    className={`fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm lg:hidden transition-all duration-500 ${
+      isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+    }`}
+  />
+
+  {/* 2. Menu Drawer (Hanya Setengah Jendela) */}
+  <div className={`
+    fixed top-0 left-0 w-full z-[110] lg:hidden
+    bg-[#020617]/95 backdrop-blur-3xl border-b border-white/10
+    transition-all duration-500 ease-in-out transform
+    ${isMenuOpen ? "translate-y-0" : "-translate-y-full"}
+    /* Tinggi Tepat Setengah Window */
+    h-[50vh] flex flex-col justify-center items-center px-8
+  `}>
+    
+    {/* Dekorasi Garis Cahaya di dalam menu */}
+    <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50"></div>
+
+    {/* Links Menu */}
+    <div className="flex flex-col items-center gap-8 w-full">
+      {mobileLinks.map((link, index) => (
+        <Link 
+          key={link.name} 
+          to={link.path} 
+          onClick={toggleMenu}
+          className={`text-white text-3xl font-black uppercase tracking-[0.3em] transition-all duration-500 hover:text-blue-400 ${
+            isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+          style={{ transitionDelay: `${index * 100}ms` }}
+        >
+          {link.name}
+        </Link>
+      ))}
+    </div>
+
+    {/* Footer Kecil di bawah Menu Laci */}
+    <div className="absolute bottom-6 flex flex-col items-center gap-2">
+      <div className="w-10 h-[1px] bg-white/20"></div>
+      <p className="text-[10px] text-white/30 font-bold uppercase tracking-[0.5em]">
+        Rayhanza Portfolio
+      </p>
+    </div>
+  </div>
+</>
     </>
   );
 };
