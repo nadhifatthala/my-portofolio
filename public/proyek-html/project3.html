@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail - Dashboard SAPA JATIM</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #020617;
+            --accent: #3b82f6;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.08);
+            --text-dim: #94a3b8;
+        }
+
+        /* --- RESET KURSOR KE STANDAR --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            cursor: default;
+            /* Kursor Panah Standar */
+            background-color: var(--bg);
+        }
+
+        /* --- KURSOR BERUBAH JADI JARI (KLIK) SAAT HOVER --- */
+        a,
+        .back-link,
+        .gallery-item,
+        .modal {
+            cursor: pointer !important;
+        }
+
+        body {
+            color: white;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-image: radial-gradient(circle at 50% 20%, #1e1b4b 0%, #020617 100%);
+            background-attachment: fixed;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
+
+        /* Tombol Kembali */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            padding: 14px 28px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: white;
+            border-color: var(--accent);
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateX(-8px);
+        }
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        .label {
+            color: var(--accent);
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            font-weight: 800;
+            background: linear-gradient(to right, #ffffff, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* GRID GALLERY 2 KOLOM BESAR */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .gallery-item {
+            width: 50%;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-12px);
+            border-color: var(--accent);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.03);
+        }
+
+        /* --- MODAL POPUP --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(15px);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            max-width: 95%;
+            max-height: 90vh;
+            border-radius: 15px;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        /* Penjelasan Project */
+        .project-info {
+            margin-top: 80px;
+            padding: 50px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 40px;
+        }
+
+        .project-info h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .project-info p {
+            color: #cbd5e1;
+            font-size: 18px;
+            max-width: 900px;
+        }
+
+        @media (max-width: 1000px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Tombol Kembali -->
+        <a href="/" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+
+        <header>
+            <span class="label">Machine Learning Project</span>
+            <h1>Rice Leaf Detection <br> Mobile Application.</h1>
+        </header>
+
+        <!-- Gallery Grid (2 Kolom) -->
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="img/appdev.png" alt="Dashboard 1">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="img/appdev2.png" alt="Dashboard 2">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="img/appdev1.png" alt="Dashboard 3">
+            </div>
+        </div>
+
+        <div class="project-info">
+            <h2><i class="fas fa-circle-info"></i> Project Details</h2>
+            <p>
+                Rice Leaf Detection is a mobile-based machine learning application developed to identify and classify
+                diseases on rice leaves using image recognition technology.
+                Users can upload images directly from the gallery or capture them using the camera, then perform disease
+                classification in real time.
+                The application provides prediction results along with confidence scores to help monitor plant health
+                more effectively and support smart agriculture solutions.
+                Click on the images to enlarge and explore the detailed application interface.
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal Pop-up -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <img class="modal-content" id="imgFull">
+    </div>
+
+    <script>
+        function openModal(element) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("imgFull");
+            modal.classList.add("active");
+            modalImg.src = element.querySelector('img').src;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").classList.remove("active");
+            document.body.style.overflow = 'auto';
+        }
+
+        // Tutup dengan tombol Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeModal();
+        });
+    </script>
+
+</body>
+
+</html>

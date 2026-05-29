@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html, #root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #020617;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Animasi Bintang Kelap-Kelip */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Animasi Bintang Melayang */
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-20px) translateX(10px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+.animate-twinkle {
+  animation: twinkle var(--duration) ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float var(--duration) ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a8a;
+  border-radius: 10px;
+}
