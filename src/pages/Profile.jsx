@@ -143,60 +143,16 @@ const projects = [
             </h2>
 
             {/* Deskripsi */}
-            <p className="text-lg md:text-2xl text-white font-medium mt-10 md:mt-12 max-w-2xl leading-relaxed italic">
+            <p className="text-lg md:text-2xl text-white font-medium mt-10 md:mt-12 max-w-2xl leading-relaxed ">
               Front-end Developer | UI/UX Enthusiast | Android Developer | <br className="hidden md:block" /> Deep Learning
-            </p>
+            </p><br />
 
             {/* Tombol-tombol: justify-start di layar besar memastikannya tetap di kiri */}
             <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-row items-center justify-center lg:justify-start gap-5 md:gap-8 w-full max-w-4xl lg:max-w-none">
 
-              {/* 1. ABOUT ME */}
-              <button
-                onClick={() => scrollToSection('about')}
-                className="group relative min-w-[220px] px-10 py-6 bg-gradient-to-b from-blue-400 to-blue-600 rounded-full border-2 border-white/30 shadow-[0_0_25px_rgba(59,130,246,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(59,130,246,0.8)] overflow-hidden flex items-center justify-center"
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-white/20"></div>
-                <div className="absolute top-0 left-0 w-full h-[45%] bg-white/25 border-b border-white/10 rounded-t-full"></div>
-                <span className="relative z-10 text-white font-black text-xl md:text-2xl italic tracking-widest uppercase drop-shadow-lg">
-                  About Me
-                </span>
-              </button>
-
-              {/* 2. PROJECTS */}
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="group relative min-w-[220px] px-10 py-6 bg-gradient-to-b from-purple-400 to-purple-600 rounded-full border-2 border-white/30 shadow-[0_0_25px_rgba(168,85,247,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(168,85,247,0.8)] overflow-hidden flex items-center justify-center"
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-white/20"></div>
-                <div className="absolute top-0 left-0 w-full h-[45%] bg-white/25 border-b border-white/10 rounded-t-full"></div>
-                <span className="relative z-10 text-white font-black text-xl md:text-2xl italic tracking-widest uppercase drop-shadow-lg">
-                  Projects
-                </span>
-              </button>
-
-              {/* 3. CERTS */}
-              <button
-                onClick={() => scrollToSection('certificates')}
-                className="group relative min-w-[220px] px-10 py-6 bg-gradient-to-b from-purple-400 to-purple-600 rounded-full border-2 border-white/30 shadow-[0_0_25px_rgba(168,85,247,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(168,85,247,0.8)] overflow-hidden flex items-center justify-center"
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-white/20"></div>
-                <div className="absolute top-0 left-0 w-full h-[45%] bg-white/25 border-b border-white/10 rounded-t-full"></div>
-                <span className="relative z-10 text-white font-black text-xl md:text-2xl italic tracking-widest uppercase drop-shadow-lg">
-                  Certificates
-                </span>
-              </button>
-
-              {/* 4. SKILLS */}
-              <button
-                onClick={() => scrollToSection('skills')}
-                className="group relative min-w-[220px] px-10 py-6 bg-gradient-to-b from-blue-400 to-blue-600 rounded-full border-2 border-white/30 shadow-[0_0_25px_rgba(59,130,246,0.5)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(59,130,246,0.8)] overflow-hidden flex items-center justify-center"
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-white/20"></div>
-                <div className="absolute top-0 left-0 w-full h-[45%] bg-white/25 border-b border-white/10 rounded-t-full"></div>
-                <span className="relative z-10 text-white font-black text-xl md:text-2xl italic tracking-widest uppercase drop-shadow-lg">
-                  My Skills
-                </span>
-              </button>
+              <p className="text-lg md:text-2xl text-white font-bold mt-10 md:mt-12 max-w-2xl leading-relaxed italic">
+              Scroll Down To See About Me 
+            </p>
             </div>
           </div>
 
