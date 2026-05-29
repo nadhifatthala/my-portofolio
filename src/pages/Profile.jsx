@@ -222,7 +222,7 @@ const projects = [
       <section id="skills" className="relative min-h-screen w-full px-6 md:px-20 py-32 flex flex-col items-center justify-center bg-transparent scroll-mt-32">
         <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col items-center text-center">
           <h2 className="text-6xl md:text-8xl lg:text-[10rem] font-black text-white tracking-tighter leading-[0.8] uppercase mb-6">My <span className="text-blue-600">Skills.</span></h2>
-          <br /><br /><br /><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 w-full">
+          <br /><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 w-full">
             {skills.map((skill, index) => (
               <div
                 key={index}
@@ -263,7 +263,7 @@ const projects = [
           <div className="w-full flex flex-col items-center text-center mb-24 md:mb-44 px-4">
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-[0.8] tracking-tighter uppercase mb-10 text-white">
               My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 italic">Projects.</span>
-            </h1><br /><br /><br />
+            </h1><br />
             
           </div>
 
@@ -323,11 +323,11 @@ const projects = [
             <div className="group relative bg-[#0a0f1e]/80 border border-purple-500/20 rounded-xl p-10 text-left transition-all duration-500 hover:border-purple-500/50 hover:-translate-y-2 shadow-2xl backdrop-blur-md">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 flex items-center justify-center bg-purple-500/10 rounded-lg text-purple-500"><svg viewBox="0 0 24 24" className="w-8 h-8"><path d="M12 3v18M3 12h18M5.3 5.3l13.4 13.4M18.7 5.3L5.3 18.7" stroke="currentColor" strokeWidth="2" fill="none" /></svg></div>
-                <p className="text-sm font-black uppercase tracking-[0.2em] text-purple-400">DQLab</p>
+                <p className="text-sm font-black uppercase tracking-[0.2em] text-purple-400">Unversitas Trunojoyo Madura</p>
               </div>
-              <h3 className="text-3xl font-bold text-white mb-4 leading-snug">Guide to Learn R with AI</h3>
+              <h3 className="text-3xl font-bold text-white mb-4 leading-snug">TOEFL Certification</h3>
               <div className="w-12 h-[3px] bg-purple-500 mb-6 transition-all duration-500 group-hover:w-20" />
-              <p className="text-white text-lg font-light leading-relaxed mb-8">Guide to Learn R with AI at DQLab (18 April 2024)</p>
+              <p className="text-white text-lg font-light leading-relaxed mb-8">TOEFL Certification with a score of 450 awarded by Universitas Trunojoyo Madura (24 April 2026)</p>
               <button onClick={() => openCert('/certs/image1.png')} className="px-7 py-4 bg-white/5 border border-white/10 rounded-full text-white font-black text-xs uppercase tracking-widest hover:bg-purple-600 transition-all">View Certificate</button>
             </div>
 
@@ -411,6 +411,16 @@ const projects = [
               <div className="w-12 h-[3px] bg-purple-500 mb-6 transition-all duration-500 group-hover:w-20" />
               <p className="text-white text-lg font-light leading-relaxed mb-8">Event Online - Cyber Security by DiBimbing (18 Mei 2026)</p>
               <button onClick={() => openCert('/certs/cyber.png')} className="px-7 py-4 bg-white/5 border border-white/10 rounded-full text-white font-black text-xs uppercase tracking-widest hover:bg-purple-600 transition-all">View Certificate</button>
+            </div>
+            <div className="group relative bg-[#0a0f1e]/80 border border-purple-500/20 rounded-xl p-10 text-left transition-all duration-500 hover:border-purple-500/50 hover:-translate-y-2 shadow-2xl backdrop-blur-md">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 flex items-center justify-center bg-purple-500/10 rounded-lg text-purple-500"><svg viewBox="0 0 24 24" className="w-8 h-8"><path d="M12 3v18M3 12h18M5.3 5.3l13.4 13.4M18.7 5.3L5.3 18.7" stroke="currentColor" strokeWidth="2" fill="none" /></svg></div>
+                <p className="text-sm font-black uppercase tracking-[0.2em] text-purple-400">DQLab</p>
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-4 leading-snug">Guide to Learn R with AI</h3>
+              <div className="w-12 h-[3px] bg-purple-500 mb-6 transition-all duration-500 group-hover:w-20" />
+              <p className="text-white text-lg font-light leading-relaxed mb-8">Guide to Learn R with AI at DQLab (18 April 2024)</p>
+              <button onClick={() => openCert('/certs/image1.png')} className="px-7 py-4 bg-white/5 border border-white/10 rounded-full text-white font-black text-xs uppercase tracking-widest hover:bg-purple-600 transition-all">View Certificate</button>
             </div>
           </div>
 
