@@ -135,9 +135,9 @@ const projects = [
 
         {/* Mengubah max-w-7xl menjadi max-w-[1600px] atau max-w-none agar lebih lebar ke kiri/kanan */}
         <div className="relative z-10 w-full max-w-[1500px] flex flex-col lg:flex-row items-center justify-between gap-12 mt-32 lg:mt-20">
-<br /><br /><br />
+<br /><br />
           {/* Sisi Teks: Memastikan lg:items-start dan lg:text-left tetap terjaga */}
-          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-1"><br /><br />
+          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left order-1">
             <h2 className="text-[2.5rem] md:text-7xl lg:text-[8.5rem] font-black tracking-tighter leading-[0.9] uppercase drop-shadow-2xl text-white">
               Rayhanza <br /> Nadhif <br /> Athala
             </h2>
@@ -148,12 +148,15 @@ const projects = [
             </p><br />
 
             {/* Tombol-tombol: justify-start di layar besar memastikannya tetap di kiri */}
-            <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-row items-center justify-center lg:justify-start gap-5 md:gap-8 w-full max-w-4xl lg:max-w-none">
-
-              <p className="text-lg md:text-2xl text-white font-bold mt-10 md:mt-12 max-w-2xl leading-relaxed italic">
-              Scroll Down To See About Me 
-            </p>
-            </div>
+            <div className="mt-8 md:mt-12 flex flex-col items-center justify-center w-full">
+  <p className="text-lg md:text-2xl text-white font-bold text-center leading-relaxed italic animate-bounce">
+    Scroll Down To See About Me 
+  </p>
+  {/* Opsional: Tambahkan ikon panah bawah agar lebih menarik */}
+  <div className="text-white text-2xl mt-2 animate-bounce">
+    ↓
+  </div>
+</div>
           </div>
 
           {/* BAGIAN FOTO (Tetap di kanan) */}
@@ -259,9 +262,9 @@ const projects = [
         <div className="max-w-[1400px] mx-auto w-full relative z-10 flex flex-col items-center">
           <div className="w-full flex flex-col items-center text-center mb-24 md:mb-44 px-4">
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black leading-[0.8] tracking-tighter uppercase mb-10 text-white">
-              My <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 italic">Projects.</span>
-            </h1>
-            <p className="max-w-xl mx-auto text-blue-200/40 text-base md:text-xl font-light leading-relaxed">Klik pada kartu untuk melihat detail proyek secara mendalam.</p>
+              My <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 italic">Projects.</span>
+            </h1><br /><br /><br />
+            
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 w-full items-start">
